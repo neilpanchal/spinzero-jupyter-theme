@@ -29,8 +29,8 @@ html {
 body {
     background-color: #FFF !important;
     color: #828282;
-    font-weight: 1rem;
-    font-family: 'Source Sans Pro', "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: normal;
+    font-family: "San Francisco", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 body .notebook-app {
@@ -76,24 +76,25 @@ samp {
 }
 
 h1 {
-    font-size: 1.5rem !important;
+    font-size: 1.875rem !important;
     font-weight: 300 !important;
     color: #828282 !important;
     letter-spacing: 3px !important;
     text-transform: uppercase !important;
+    text-align: center !important;
+    padding-bottom: 2rem;
     /*border-bottom: 1px dashed #000000 !important;*/
 }
 
 h2 {
-    font-size: 1rem !important;
+    font-size: 1.5rem !important;
     font-weight: 500 !important;
     color: #828282 !important;
-    letter-spacing: 3px !important;
     text-transform: none !important;
 }
 
 h3 {
-    font-size: 1rem !important;
+    font-size: 1.25rem !important;
     font-weight: 300 !important;
     font-style: italic !important;
     display: block !important;
@@ -137,7 +138,7 @@ div.input_prompt {
 
 .code_cell div.input_prompt:after,
 div.output_prompt:after {
-    content: '\25b6';
+    content: '\2192';
 }
 
 div.output_prompt {
