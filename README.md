@@ -1,7 +1,7 @@
 ### Spinzero - Jupyter Notebook Theme
 Personal theme that I use for Jupyter notebooks
 
-![Notebook Design Screenshot](http://i.imgur.com/U7eRiTB.png "Notebook Design")
+![Notebook Design Screenshot](https://github.com/neilpanchal/spinzero-jupyter-theme/raw/master/screenshot.png "Notebook Design")
 
 ### Installation instructions
 https://github.com/nsonnad/base16-ipython-notebook
