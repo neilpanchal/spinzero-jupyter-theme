@@ -203,9 +203,10 @@ h6 {
 
 .prompt {
     font-family: "sf-mono", 'Menlo', monospace !important;
+    font-style: normal;
     font-size: 0.75rem;
     text-align: right;
-    line-height: 1.21429rem;
+    line-height: 1rem;
 }
 
 /* INTRO PAGE */
@@ -226,16 +227,18 @@ div#notebook {
 }
 
 div.input_prompt {
-    color: #C74483;
+    color: #000000;
 }
 
 .code_cell div.input_prompt:after,
-div.output_prompt:after {
-    content: '\2192';
+.code_cell div.output_prompt:after {
+    content: '\27F6';
+    font-size:  1rem;
+    font-style: normal;
 }
 
 div.output_prompt {
-    color: #2B88D9;
+    color: #000000;
 }
 
 div.input_area {
@@ -427,3 +430,10 @@ div.output_stderr pre {
     text-decoration: underline;
     color: #828282 !important;
 }
+
+/* Unicode Arrows
+Source: http://www.copypastecharacter.com/
+
+▼ ↪ ↩ ← ↑ → ↓ ↔ ↕ ↖ ↗ ↘ ↙ ↚ ↛ ↜ ↝ ↞ ↟ ↠ ↡ ↢ ↣ ↤ ↦ ↥ ↧ ↨ ↫ ↬ ↭ ↮ ↯ ↰ ↱ ↲ ↴ ↳ ↵ ↶ ↷ ↸ ↹ ↺ ↻ ⟲ ⟳ ↼ ↽ ↾ ↿ ⇀ ⇁ ⇂ ⇃ ⇄ ⇅ ⇆ ⇇ ⇈ ⇉ ⇊ ⇋ ⇌ ⇍ ⇏ ⇎ ⇑ ⇓ ⇐ ⇒ ⇔ ⇕ ⇖ ⇗ ⇘ ⇙ ⇳ ⇚ ⇛ ⇜ ⇝ ⇞ ⇟ ⇠ ⇡ ⇢ ⇣ ⇤ ⇥ ⇦ ⇨ ⇩ ⇪ ⇧ ⇫ ⇬ ⇭ ⇮ ⇯ ⇰ ⇱ ⇲ ⇴ ⇵ ⇶ ⇷ ⇸ ⇹ ⇺ ⇻ ⇼ ⇽ ⇾ ⇿ ⟰ ⟱ ⟴ ⟵ ⟶ ⟷ ⟸ ⟹ ⟽ ⟾ ⟺ ⟻ ⟼ ⟿ ⤀ ⤁ ⤅ ⤂ ⤃ ⤄ ⤆ ⤇ ⤈ ⤉ ⤊ ⤋ ⤌ ⤍ ⤎ ⤏ ⤐ ⤑ ⤒ ⤓ ⤔ ⤕ ⤖ ⤗ ⤘ ⤙ ⤚ ⤛ ⤜ ⤝ ⤞ ⤟ ⤠ ⤡ ⤢ ⤣ ⤤ ⤥ ⤦ ⤧ ⤨ ⤩ ⤪ ⤭ ⤮ ⤯ ⤰ ⤱ ⤲ ⤳ ⤻ ⤸ ⤾ ⤿ ⤺ ⤼ ⤽ ⤴ ⤵ ⤶ ⤷ ⤹ ⥀ ⥁ ⥂ ⥃ ⥄ ⥅ ⥆ ⥇ ⥈ ⥉ ⥒ ⥓ ⥔ ⥕ ⥖ ⥗ ⥘ ⥙ ⥚ ⥛ ⥜ ⥝ ⥞ ⥟ ⥠ ⥡ ⥢ ⥣ ⥤ ⥥ ⥦ ⥧ ⥨ ⥩ ⥪ ⥫ ⥬ ⥭ ⥮ ⥯ ⥰ ⥱ ⥲ ⥳ ⥴ ⥵ ⥶ ⥷ ⥸ ⥹ ⥺ ⥻ ➔ ➘ ➙ ➚ ➛ ➜ ➝ ➞ ➟ ➠ ➡ ➢ ➣ ➤ ➥ ➦ ➧ ➨ ➩ ➪ ➫ ➬ ➭ ➮ ➯ ➱ ➲ ➳ ➴ ➵ ➶ ➷ ➸ ➹ ➺ ➻ ➼ ➽ ➾ ⬀ ⬁ ⬂ ⬃ ⬄ ⬅ ⬆ ⬇ ⬈ ⬉ ⬊ ⬋ ⬌ ⬍ ⏎ ▲ ▼ ◀ ▶ ⬎ ⬏ ⬐ ⬑ ☇ ☈ ⍃ ⍄ ⍇ ⍈ ⍐ ⍗ ⍌ ⍓ ⍍ ⍔ ⍏ ⍖ ⍅ ⍆
+
+*/
