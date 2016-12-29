@@ -140,6 +140,7 @@ body .notebook-app {
 
 div.cell.selected {
     border: 1px dashed #CCCCCC;
+    background: none;
 }
 
 .edit_mode div.cell.selected {
