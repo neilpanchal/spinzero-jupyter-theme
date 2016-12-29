@@ -2,7 +2,8 @@
 Personal theme that I use for Jupyter notebooks
 
 ### Installation instructions
-https://github.com/nsonnad/base16-ipython-notebook
+Create a new directory `".jupyter/custom"` in your home folder if it doesn't exist.
+Copy the contents of this repository to the `.jupyter/custom"` folder.
 
 ### Color Palette
 ```CSS
