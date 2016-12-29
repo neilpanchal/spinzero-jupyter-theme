@@ -4,7 +4,7 @@ http://neil.engineer
 
 PALETTE
 
-YELLOW      = #D9AA00
+YELLOW      = #C39900
 ORANGE      = #CF5804
 RED         = #D43132
 MAGENTA     = #C74483
@@ -166,7 +166,7 @@ h1 {
 	font-family:  "sf-display", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
     font-size: 1.875rem !important;
     font-weight: 300 !important;
-    color: #828282 !important;
+    color: #000000 !important;
     letter-spacing: 3px !important;
     text-transform: uppercase !important;
     text-align: center !important;
@@ -179,7 +179,7 @@ h2 {
 	font-family:  "sf-display", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
     font-size: 1.5rem !important;
     font-weight: 500 !important;
-    color: #828282 !important;
+    color: #000000 !important;
     text-transform: none !important;
 }
 
@@ -188,6 +188,7 @@ h3 {
     font-size: 1.25rem !important;
     font-weight: 300 !important;
     font-style: italic !important;
+    color: #000000 !important;
     display: block !important;
 }
 
@@ -325,7 +326,7 @@ span.ansired {
 }
 
 span.ansiyellow {
-    color: #D9AA00;
+    color: #C39900;
 }
 
 div.output_stderr {
@@ -381,7 +382,7 @@ div.output_stderr pre {
 }
 
 .cm-s-ipython span.cm-string {
-    color: #D9AA00;
+    color: #C39900;
 }
 
 .cm-s-ipython span.cm-operator {
