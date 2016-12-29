@@ -20,6 +20,93 @@ LIGHT GRAY  = #828282
 
 */
 
+/* FONTS */
+
+@font-face {
+ font-family: 'sf-display';
+ font-weight: normal;
+ font-style: normal;
+ src: url('fonts/sf-display/SanFranciscoDisplay-Regular.otf') format('opentype');
+}
+
+@font-face {
+ font-family: 'sf-display';
+ font-weight: normal;
+ font-style: italic;
+ src: url('fonts/sf-display/SanFranciscoDisplay-RegularItalic.otf') format('opentype');
+}
+
+@font-face {
+ font-family: 'sf-display';
+ font-weight: bold;
+ font-style: normal;
+ src: url('fonts/sf-display/SanFranciscoDisplay-Bold.otf') format('opentype');
+}
+
+@font-face {
+ font-family: 'sf-display';
+ font-weight: bold;
+ font-style: italic;
+ src: url('fonts/sf-display/SanFranciscoDisplay-BoldItalic.otf') format('opentype');
+}
+
+@font-face {
+ font-family: 'sf-text';
+ font-weight: normal;
+ font-style: normal;
+ src: url('fonts/sf-text/SanFranciscoText-Regular.otf') format('opentype');
+}
+
+@font-face {
+ font-family: 'sf-text';
+ font-weight: normal;
+ font-style: italic;
+ src: url('fonts/sf-text/SanFranciscoText-RegularItalic.otf') format('opentype');
+}
+
+@font-face {
+ font-family: 'sf-text';
+ font-weight: bold;
+ font-style: normal;
+ src: url('fonts/sf-text/SanFranciscoText-Bold.otf') format('opentype');
+}
+
+@font-face {
+ font-family: 'sf-text';
+ font-weight: bold;
+ font-style: italic;
+ src: url('fonts/sf-text/SanFranciscoText-BoldItalic.otf') format('opentype');
+}
+
+@font-face {
+ font-family: 'sf-mono';
+ font-weight: normal;
+ font-style: normal;
+ src: url('fonts/sf-mono/SFMono-Regular.otf') format('opentype');
+}
+
+@font-face {
+ font-family: 'sf-mono';
+ font-weight: normal;
+ font-style: italic;
+ src: url('fonts/sf-mono/SFMono-RegularItalic.otf') format('opentype');
+}
+
+@font-face {
+ font-family: 'sf-mono';
+ font-weight: bold;
+ font-style: normal;
+ src: url('fonts/sf-mono/SFMono-Bold.otf') format('opentype');
+}
+
+@font-face {
+ font-family: 'sf-mono';
+ font-weight: bold;
+ font-style: italic;
+ src: url('fonts/sf-mono/SFMono-BoldItalic.otf') format('opentype');
+}
+
+
 /* GLOBALS */
 
 html {
@@ -30,7 +117,7 @@ body {
     background-color: #FFF !important;
     color: #828282;
     font-weight: normal;
-    font-family: "San Francisco", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "sf-text", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 body .notebook-app {
@@ -71,22 +158,25 @@ code,
 kbd,
 pre,
 samp {
-    font-family: 'Menlo', monospace !important;
+    font-family: "sf-mono", 'Menlo', monospace !important;
     font-size: 0.75rem !important;
 }
 
 h1 {
+	font-family:  "sf-display", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
     font-size: 1.875rem !important;
     font-weight: 300 !important;
     color: #828282 !important;
     letter-spacing: 3px !important;
     text-transform: uppercase !important;
     text-align: center !important;
-    padding-bottom: 2rem;
+    padding-top:  3rem;
+    padding-bottom: 3rem;
     /*border-bottom: 1px dashed #000000 !important;*/
 }
 
 h2 {
+	font-family:  "sf-display", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
     font-size: 1.5rem !important;
     font-weight: 500 !important;
     color: #828282 !important;
@@ -94,6 +184,7 @@ h2 {
 }
 
 h3 {
+	font-family:  "sf-display", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
     font-size: 1.25rem !important;
     font-weight: 300 !important;
     font-style: italic !important;
@@ -103,13 +194,14 @@ h3 {
 h4,
 h5,
 h6 {
+	font-family:  "sf-display", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
     font-size: 1rem !important;
     font-weight: 500 !important;
     display: block !important;
 }
 
 .prompt {
-    font-family: 'Menlo', monospace !important;
+    font-family: "sf-mono", 'Menlo', monospace !important;
     font-size: 0.75rem;
     text-align: right;
     line-height: 1.21429rem;
@@ -187,7 +279,7 @@ div.output_subarea {
 
 div.output_html {
     font-weight: 1rem;
-    font-family: 'Source Sans Pro', "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "sf-text", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 table.dataframe tr {
