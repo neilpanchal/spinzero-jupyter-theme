@@ -1,5 +1,5 @@
 ### iPython-Notebook-Theme
-Personal theme that I use for iPython notebooks
+Personal theme that I use for Jupyter notebooks
 
 ![Notebook Design Screenshot](http://i.imgur.com/U7eRiTB.png "Notebook Design")
 
