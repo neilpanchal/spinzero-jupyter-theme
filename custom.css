@@ -234,7 +234,7 @@ div.input_prompt {
 .code_cell div.output_prompt:after {
     content: '\27F6';
     font-size:  1rem;
-    font-style: normal;
+    font-style: normal !important;
 }
 
 div.output_prompt {
