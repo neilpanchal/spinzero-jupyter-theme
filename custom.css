@@ -140,11 +140,12 @@ body .notebook-app {
 
 div.cell.selected {
     border: 1px dashed #CCCCCC;
-    background: none;
+    background: none !important;
 }
 
 .edit_mode div.cell.selected {
     border: 1px dashed #828282;
+    background: none !important;
 }
 
 div.output_wrapper {
