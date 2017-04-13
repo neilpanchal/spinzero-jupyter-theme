@@ -8,7 +8,7 @@ YELLOW      = #C39900
 ORANGE      = #CF5804
 RED         = #D43132
 MAGENTA     = #C74483
-VIOLET      = #975DDE
+VIOLET      = #722fc3
 BLUE        = #2B88D9
 CYAN        = #00A397
 GREEN       = #688A0A
@@ -162,30 +162,46 @@ body .notebook-app {
 }
 
 div.cell.selected {
-    border: 1px dotted #CCCCCC;
+    border: none;
     background: none !important;
+}
+
+div.cell.selected div.input:before {
+	display: inline-block;
+	position: absolute;
+    content: "●";
+    font-size:  0.75rem;
+    top: 16px;
+    width: 10px;
+    left: 10px;
+    color: #00A397;
+    font-style: normal !important;
+}
+
+.edit_mode div.cell.selected div.input:before {
+    color: #C74483;
 }
 
 div.cell.selected:before, div.cell.selected.jupyter-soft-selected:before {
     position: absolute;
-    display: block;
+    display: none;
     top: -1px;
     left: -1px;
-    width: 2px;
+    width: 0px;
     height: calc(100% + 2px);
     content: '';
-    background: #C39900;
+    background: none;
 }
 
 
 .edit_mode div.cell.selected {
-    border: 1px dotted #828282;
+    border: none;
     background: none !important;
 }
 
 .edit_mode div.cell.selected:before{
-	width: 2px;
-	background: #C74483;
+	width: 0px;
+	background: none;
 }
 
 div.output_wrapper {
@@ -276,7 +292,7 @@ div.input_prompt {
 .code_cell div.input_prompt:after,
 .code_cell div.output_prompt:after {
 	display: inline-block;
-    content: '+';
+    content: '';
     font-size:  0.75rem;
     font-style: normal !important;
 }
@@ -305,25 +321,25 @@ div.output_subarea {
     color: #828282;
 }
 
-.rendered_html table,
+/* .rendered_html table,
 .rendered_html th,
 .rendered_html tr,
 .rendered_html td {
     border: 1px #828282 solid;
     font-size: 0.75rem;
     font-family: 'sf-mono', 'Menlo', 'Courier New', monospace;
-}
+} */
 
-.rendered_html th,
+/* .rendered_html th,
 .rendered_html tr,
 .rendered_html td {
     padding: 5px 10px;
 }
-
-.rendered_html th {
+ */
+/* .rendered_html th {
     font-weight: normal;
     background: #f8f8f8;
-}
+} */
 
 div.output_html {
     font-size: 0.75rem;
@@ -395,6 +411,7 @@ table thead tr th, table.dataframe thead tr th {
 }
 div.cell {
 	padding: 12px 12px 5px 5px;
+	border:  none;
 }
 div.cell.selected {
     border-radius: 0px;
@@ -427,7 +444,7 @@ span.ansigreen {
 }
 
 span.ansipurple {
-    color: #975DDE;
+    color: #722fc3;
 }
 
 span.ansired {
@@ -439,11 +456,11 @@ span.ansiyellow {
 }
 
 div.output_stderr {
-    background-color: #D43132;
+    background-color: #FFFFFF;
 }
 
 div.output_stderr pre {
-    color: #e8e8e8;
+    color: #722fc3;
 }
 
 .cm-s-ipython.CodeMirror {
@@ -529,7 +546,7 @@ div.output_stderr pre {
 }
 
 .cm-s-ipython span.cm-link {
-    color: #975DDE;
+    color: #722fc3;
 }
 
 .cm-s-ipython .CodeMirror-matchingbracket {
