@@ -167,13 +167,14 @@ div.cell.selected {
 }
 
 div.cell.selected div.input:before {
-	display: inline-block;
-	position: absolute;
+	display: block;
+	position: relative;
     content: "●";
     font-size:  0.75rem;
-    top: 16px;
+    top: 4px;
     width: 10px;
     left: 10px;
+    margin-left: -11px;
     color: #00A397;
     font-style: normal !important;
 }
