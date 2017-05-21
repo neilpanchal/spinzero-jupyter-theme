@@ -45,7 +45,7 @@ green     #859900  2/2 green     64 #5f8700 60 -20  65 133 153   0  68 100  60
 
 /* FONTS */
 
-@font-face {
+/* @font-face {
  font-family: 'sf-display';
  font-weight: normal;
  font-style: normal;
@@ -71,34 +71,41 @@ green     #859900  2/2 green     64 #5f8700 60 -20  65 133 153   0  68 100  60
  font-weight: bold;
  font-style: italic;
  src: url('fonts/sf-display/SanFranciscoDisplay-BoldItalic.otf') format('opentype');
-}
+} */
 
 @font-face {
- font-family: 'sf-text';
- font-weight: normal;
- font-style: normal;
- src: url('fonts/sf-text/SanFranciscoText-Regular.otf') format('opentype');
-}
-
-@font-face {
- font-family: 'sf-text';
+ font-family: 'cmu-text-decorated';
  font-weight: normal;
  font-style: italic;
- src: url('fonts/sf-text/SanFranciscoText-RegularItalic.otf') format('opentype');
+ src: url('fonts/cmu-text/CMUSerif-UprightItalic.otf') format('opentype');
 }
 
 @font-face {
- font-family: 'sf-text';
+ font-family: 'cmu-text';
+ font-weight: normal;
+ font-style: normal;
+ src: url('fonts/cmu-text/CMUSerif-Roman.otf') format('opentype');
+}
+
+@font-face {
+ font-family: 'cmu-text';
+ font-weight: normal;
+ font-style: italic;
+ src: url('fonts/cmu-text/CMUSerif-Italic.otf') format('opentype');
+}
+
+@font-face {
+ font-family: 'cmu-text';
  font-weight: bold;
  font-style: normal;
- src: url('fonts/sf-text/SanFranciscoText-Bold.otf') format('opentype');
+ src: url('fonts/cmu-text/CMUSerif-BoldNonextended.otf') format('opentype');
 }
 
 @font-face {
- font-family: 'sf-text';
+ font-family: 'cmu-text';
  font-weight: bold;
  font-style: italic;
- src: url('fonts/sf-text/SanFranciscoText-BoldItalic.otf') format('opentype');
+ src: url('fonts/cmu-text/CMUSerif-BoldItalic.otf') format('opentype');
 }
 
 @font-face {
@@ -140,7 +147,10 @@ body {
     background-color: #FFF !important;
     color: #828282;
     font-weight: normal;
-    font-family: "sf-text", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "cmu-text", "Times New Roman", serif;
+    overflow: inherit;
+    right: auto;
+    left: 40px;
 }
 
 body .notebook-app {
@@ -155,10 +165,16 @@ body .notebook-app {
     padding-top: 0px;
 }
 
+.container {
+	width: 940px;
+}
+#site {
+	overflow: inherit;
+}
 #notebook-container {
     box-shadow: none;
     -webkit-box-shadow: none;
-    padding: 10px;
+    padding: 0px;
 }
 
 div.cell.selected {
@@ -222,12 +238,12 @@ samp {
 }
 
 h1 {
-	font-family:  "sf-display", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
-    font-size: 1.875rem !important;
+	font-family:  "cmu-text", "Times New Roman", serif !important;
+    font-size: 1.6rem !important;
     font-weight: 300 !important;
     color: #000000 !important;
-    letter-spacing: 3px !important;
-    text-transform: uppercase !important;
+    /* letter-spacing: 3px !important; */
+    text-transform: normal !important;
     text-align: center !important;
     padding-top:  3rem;
     padding-bottom: 3rem;
@@ -235,29 +251,37 @@ h1 {
 }
 
 h2 {
-	font-family:  "sf-display", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
-    font-size: 1.5rem !important;
-    font-weight: 500 !important;
-    color: #000000 !important;
+	font-family:  "cmu-text", "Times New Roman", serif !important;
+    font-size: 1.25rem !important;
+    font-weight: bold !important;
+    color: #dc322f !important;
     text-transform: none !important;
+    margin: 2rem 0 0.75rem !important;
 }
 
 h3 {
-	font-family:  "sf-display", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
-    font-size: 1.25rem !important;
-    font-weight: 300 !important;
-    font-style: italic !important;
-    color: #000000 !important;
+	font-family:  "cmu-text", "Times New Roman", serif !important;
+    font-size: 1.175rem !important;
+    font-weight: normal !important;
+    font-style: normal !important;
+    color: #268bd2 !important;
     display: block !important;
+    margin: 1.25rem 0 0.75rem !important;
 }
 
+h4 {
+	font-style: italic;
+}
 h4,
 h5,
 h6 {
-	font-family:  "sf-display", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+	font-family:  "cmu-text", "Times New Roman", serif !important;
     font-size: 1rem !important;
     font-weight: 500 !important;
     display: block !important;
+    color: #b58900;
+    margin: 0.5rem 0 0.25rem !important;
+
 }
 
 .prompt {
@@ -284,7 +308,13 @@ div#notebook {
     border-top: none;
     font-size: 1rem;
 }
+.kernel_idle_icon:before {
+	color: #C74483;
+}
 
+.kernel_busy_icon:before {
+	color: #00A397;
+}
 div.input_prompt {
     color: #888;
     font-style: normal !important;
@@ -304,7 +334,8 @@ div.output_prompt {
 
 div.input_area {
     border-radius: 0px;
-    border: 1px solid #d8d8d8;
+    border: none;
+    padding: 0px 5px;
 }
 
 div.output_area pre {
@@ -411,7 +442,7 @@ table thead tr th, table.dataframe thead tr th {
   background-color: #d9edf7;
 }
 div.cell {
-	padding: 12px 12px 5px 5px;
+	padding: 12px 0px 5px 0px;
 	border:  none;
 }
 div.cell.selected {
@@ -461,7 +492,7 @@ div.output_stderr {
 }
 
 div.output_stderr pre {
-    color: #722fc3;
+    /* color: #722fc3; */
 }
 
 .cm-s-ipython.CodeMirror {
