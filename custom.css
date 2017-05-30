@@ -45,7 +45,7 @@ green     #859900  2/2 green     64 #5f8700 60 -20  65 133 153   0  68 100  60
 
 /* FONTS */
 
-/* @font-face {
+@font-face {
  font-family: 'sf-display';
  font-weight: normal;
  font-style: normal;
@@ -71,7 +71,7 @@ green     #859900  2/2 green     64 #5f8700 60 -20  65 133 153   0  68 100  60
  font-weight: bold;
  font-style: italic;
  src: url('fonts/sf-display/SanFranciscoDisplay-BoldItalic.otf') format('opentype');
-} */
+}
 
 @font-face {
  font-family: 'cmu-text-decorated';
@@ -147,7 +147,7 @@ body {
     background-color: #FFF !important;
     color: #828282;
     font-weight: normal;
-    font-family: "cmu-text", "Times New Roman", serif;
+    font-family: "sf-mono", "Helvetica Neue", Helvetica, Arial, sans-serif;
     overflow: inherit;
     right: auto;
     left: 40px;
@@ -163,6 +163,8 @@ body .notebook-app {
 
 #notebook {
     padding-top: 0px;
+    font-family: "cmu-text", "Times New Roman", serif;
+
 }
 
 .container {
@@ -177,20 +179,23 @@ body .notebook-app {
     padding: 0px;
 }
 
+.nav > li > a {
+	padding:  10px;
+}
+
 div.cell.selected {
     border: none;
     background: none !important;
 }
 
 div.cell.selected div.input:before {
-	display: block;
-	position: relative;
+	display: inline-block;
+	position: absolute;
     content: "●";
     font-size:  0.75rem;
-    top: 4px;
+    top: 16px;
     width: 10px;
     left: 10px;
-    margin-left: -11px;
     color: #00A397;
     font-style: normal !important;
 }
@@ -254,23 +259,24 @@ h2 {
 	font-family:  "cmu-text", "Times New Roman", serif !important;
     font-size: 1.25rem !important;
     font-weight: bold !important;
-    color: #dc322f !important;
+    color: #000000 !important;
     text-transform: none !important;
     margin: 2rem 0 0.75rem !important;
 }
 
 h3 {
 	font-family:  "cmu-text", "Times New Roman", serif !important;
-    font-size: 1.175rem !important;
+    font-size: 1.125rem !important;
     font-weight: normal !important;
-    font-style: normal !important;
-    color: #268bd2 !important;
+    font-style: italic !important;
+    color: #000000 !important;
     display: block !important;
     margin: 1.25rem 0 0.75rem !important;
 }
 
 h4 {
 	font-style: italic;
+	text-decoration: underline;
 }
 h4,
 h5,
@@ -279,7 +285,7 @@ h6 {
     font-size: 1rem !important;
     font-weight: 500 !important;
     display: block !important;
-    color: #b58900;
+    color: #000000;
     margin: 0.5rem 0 0.25rem !important;
 
 }
@@ -379,28 +385,75 @@ div.output_html {
     font-family: 'sf-mono', 'Menlo', 'Courier New', monospace;
 }
 
-table, table.dataframe {
+table.dataframe {
     border-collapse: collapse;
     border: none;
 }
-table, table.dataframe tr {
-    border: none;
-    color:
+
+table.dataframe thead {
+	padding-bottom: 10px;
 }
-table td, table.dataframe td,
+
+table.dataframe thead tr {
+    background-color: #f8f8f8;
+    color: #CF5804;
+    font-style: normal;
+    padding: 5px 10px;
+    border-bottom:  1px solid #828282;
+    vertical-align: middle;
+	text-align: center;
+}
+
+table.dataframe thead tr th, table.dataframe thead tr:only-child th {
+	vertical-align: middle;
+	text-align: center;
+}
+
+table.dataframe tbody {
+	padding-top:  5px;
+}
+
+
+table.dataframe tbody tr {
+
+
+}
+table.dataframe tbody tr th {
+	background-color: #ffffff;
+    text-align: left;
+    font-style: italic
+}
+
+table.dataframe tbody tr td {
+    background-color: #fff9ea;
+    color: #828282;
+    padding-left: 1.0rem;
+    padding-right: 1.0rem;
+}
+
+
+/* table, table.dataframe tr {
+    border: none;
+} */
+
+/* table td, table.dataframe td,
 table th, table.dataframe th {
     margin: 0;
     border: 1px solid white;
     padding-left: 0.25em;
     padding-right: 0.25em;
-}
-table th:not(:empty), table.dataframe th:not(:empty) {
+} */
+
+
+/* table th:not(:empty), table.dataframe th:not(:empty) {
     background-color: #ffffff;
     text-align: left;
     padding: 0 10px;
     font-style: italic
-}
-table.dataframe tr:nth-child(2) th:empty, table.dataframe tr:nth-child(2) th:empty,
+} */
+
+
+/* table.dataframe tr:nth-child(2) th:empty, table.dataframe tr:nth-child(2) th:empty,
 table tr:nth-child(2) th:empty, table tr:nth-child(2) th:empty {
     border-left: none;
     border-right: 1px dotted #888;
@@ -408,7 +461,7 @@ table tr:nth-child(2) th:empty, table tr:nth-child(2) th:empty {
 table td, table.dataframe td {
     background-color: #fff9ea;
     color: #828282;
-    padding: 0.25em 1em;
+    padding: 0.375em 1em;
 }
 table thead, table.dataframe thead {
 	color:  #828282;
@@ -425,7 +478,7 @@ table thead tr th, table.dataframe thead tr th {
     font-style: normal;
     padding: 5px 10px;
     border-bottom:  1px solid #828282;
-}
+} */
 
 .table > thead > tr > td.info,
 .table > tbody > tr > td.info,
