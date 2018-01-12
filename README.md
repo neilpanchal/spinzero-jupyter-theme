@@ -3,7 +3,7 @@ Personal theme that I use for Jupyter notebooks
 
 ### Installation instructions
 Create a new directory `".jupyter/custom"` in your home folder if it doesn't exist.
-Copy the contents of this repository to the `.jupyter/custom"` folder such that `custom.css` file is located at `.jupyter/custom/custom.css'
+Copy the contents of this repository to the `.jupyter/custom"` folder such that `custom.css` file is located at `.jupyter/custom/custom.css`
 
 ### Color Palette
 ```CSS
