@@ -29,4 +29,6 @@ LIGHT GRAY  = #828282
 
 ### Screenshot
 
+*Note*: There are a bunch of things I need to fix and the entire theme needs an overhaul. Screenshot below is outdated. Please install the theme and see it for yourself. I'll update the screenshot once the overhaul is finished.
+
 ![Notebook Design Screenshot](https://github.com/neilpanchal/spinzero-jupyter-theme/raw/master/screenshot.png "Notebook Design")
