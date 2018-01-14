@@ -6,7 +6,7 @@ Create a new directory `".jupyter/custom"` in your home folder if it doesn't exi
 Copy the contents of this repository to the `.jupyter/custom"` folder such that `custom.css` file is located at `.jupyter/custom/custom.css`
 
 ### Color Palette
-```CSS
+```
 	      Hex			RGB
 YELLOW      = #BA9600			[181,137,0  ]
 ORANGE      = #BA5400			[186,84	,0  ]
