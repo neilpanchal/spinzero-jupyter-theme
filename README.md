@@ -7,14 +7,14 @@ Copy the contents of this repository to the `.jupyter/custom"` folder such that 
 
 ### Color Palette
 ```CSS
-			  Hex				RGB
-YELLOW      = #BA9600			[181,137,0	]
+	      Hex			RGB
+YELLOW      = #BA9600			[181,137,0  ]
 ORANGE      = #BA5400			[186,84	,0  ]
 RED         = #D43132			[176,47	,48 ]
 MAGENTA     = #D14187			[209,65	,135]
 VIOLET      = #793AC7			[144,89	,212]
-BLUE        = #007AD0			[15	,134,217]
-CYAN        = #009489			[0	,163,151]
+BLUE        = #007AD0			[15 ,134,217]
+CYAN        = #009489			[0  ,163,151]
 GREEN       = #688A0A			[104,138,10 ]
 GREEN       = #A05200			[156,98	,48 ]
 
