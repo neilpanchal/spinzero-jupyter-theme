@@ -1,56 +1,24 @@
 /*
 Author: Neil Panchal
-http://neil.engineer
+http://neil.panchal.io
 
-PALETTE
+New colors. These are a bit darker to allow for a better contrast. I started with Solarized palette and adjusted the colors as needed.
 
-YELLOW      = #C39900
-ORANGE      = #CF5804
-RED         = #D43132
-MAGENTA     = #C74483
-VIOLET      = #975DDE
-BLUE        = #2B88D9
-CYAN        = #00A397
-GREEN       = #688A0A
 
-// New colors. These are a bit darker to allow for a better contrast.
-YELLOW      = #B58900			[181,137,0]
+YELLOW      = #ba9600			[181,137,0]
 ORANGE      = #BA5400			[186,84,0]
 RED         = #D43132			[176,47,48]
 MAGENTA     = #D14187			[209,65,135]
-VIOLET      = #9059D4			[144,89,212]
-BLUE        = #0F86D9			[15,134,217]
-CYAN        = #00A397			[0,163,151]
+VIOLET      = #793ac7			[144,89,212]
+BLUE        = #007ad0			[15,134,217]
+CYAN        = #009489			[0,163,151]
 GREEN       = #688A0A			[104,138,10]
+BROWN 		= #A05200			[156,98,48]
 
 BACKGROUND  = #F8F8F8
 DARK GRAY   = #383838
 MID GRAY    = #d8d8d8
 LIGHT GRAY  = #828282
-
-
-
-Solarized Palette: http://ethanschoonover.com/solarized
-
-SOLARIZED HEX     16/8 TERMCOL  XTERM/HEX   L*A*B      RGB         HSB
---------- ------- ---- -------  ----------- ---------- ----------- -----------
-base03    #002b36  8/4 brblack  234 #1c1c1c 15 -12 -12   0  43  54 193 100  21
-base02    #073642  0/4 black    235 #262626 20 -12 -12   7  54  66 192  90  26
-base01    #586e75 10/7 brgreen  240 #585858 45 -07 -07  88 110 117 194  25  46
-base00    #657b83 11/7 bryellow 241 #626262 50 -07 -07 101 123 131 195  23  51
-base0     #839496 12/6 brblue   244 #808080 60 -06 -03 131 148 150 186  13  59
-base1     #93a1a1 14/4 brcyan   245 #8a8a8a 65 -05 -02 147 161 161 180   9  63
-base2     #eee8d5  7/7 white    254 #e4e4e4 92 -00  10 238 232 213  44  11  93
-base3     #fdf6e3 15/7 brwhite  230 #ffffd7 97  00  10 253 246 227  44  10  99
-yellow    #b58900  3/3 yellow   136 #af8700 60  10  65 181 137   0  45 100  71
-orange    #cb4b16  9/3 brred    166 #d75f00 50  50  55 203  75  22  18  89  80
-red       #dc322f  1/1 red      160 #d70000 50  65  45 220  50  47   1  79  86
-magenta   #d33682  5/5 magenta  125 #af005f 50  65 -05 211  54 130 331  74  83
-violet    #6c71c4 13/5 brmagenta 61 #5f5faf 50  15 -45 108 113 196 237  45  77
-blue      #268bd2  4/4 blue      33 #0087ff 55 -10 -45  38 139 210 205  82  82
-cyan      #2aa198  6/6 cyan      37 #00afaf 60 -35 -05  42 161 152 175  74  63
-green     #859900  2/2 green     64 #5f8700 60 -20  65 133 153   0  68 100  60
-
 */
 
 /* FONTS */
@@ -193,49 +161,6 @@ body .notebook-app {
 	padding:  10px;
 }
 
-div.cell.selected {
-    border: none;
-    background: none !important;
-}
-
-div.cell.selected div.input:before {
-	display: inline-block;
-	position: absolute;
-    content: "●";
-    font-size:  0.75rem;
-    top: 16px;
-    width: 10px;
-    left: 10px;
-    color: #00A397;
-    font-style: normal !important;
-}
-
-.edit_mode div.cell.selected div.input:before {
-    color: #D14187;
-}
-
-div.cell.selected:before, div.cell.selected.jupyter-soft-selected:before {
-    position: absolute;
-    display: none;
-    top: -1px;
-    left: -1px;
-    width: 0px;
-    height: calc(100% + 2px);
-    content: '';
-    background: none;
-}
-
-
-.edit_mode div.cell.selected {
-    border: none;
-    background: none !important;
-}
-
-.edit_mode div.cell.selected:before{
-	width: 0px;
-	background: none;
-}
-
 div.output_wrapper {
     margin-top: 8px;
 }
@@ -329,11 +254,27 @@ div#notebook {
 }
 
 .kernel_busy_icon:before {
-	color: #00A397;
+	color: #009489;
 }
 div.input_prompt {
     color: #888;
     font-style: normal !important;
+}
+div.input_prompt bdi, div.output_prompt bdi{
+	line-height: 0;
+	font-size:0;
+	color:transparent;
+	/*left: -10000px;*/
+	/*content: "\21E2";*/
+}
+/* Unicode Arrows
+Source: http://www.copypastecharacter.com/
+
+▼ ↪ ↩ ← ↑ → ↓ ↔ ↕ ↖ ↗ ↘ ↙ ↚ ↛ ↜ ↝ ↞ ↟ ↠ ↡ ↢ ↣ ↤ ↦ ↥ ↧ ↨ ↫ ↬ ↭ ↮ ↯ ↰ ↱ ↲ ↴ ↳ ↵ ↶ ↷ ↸ ↹ ↺ ↻ ⟲ ⟳ ↼ ↽ ↾ ↿ ⇀ ⇁ ⇂ ⇃ ⇄ ⇅ ⇆ ⇇ ⇈ ⇉ ⇊ ⇋ ⇌ ⇍ ⇏ ⇎ ⇑ ⇓ ⇐ ⇒ ⇔ ⇕ ⇖ ⇗ ⇘ ⇙ ⇳ ⇚ ⇛ ⇜ ⇝ ⇞ ⇟ ⇠ ⇡ ⇢ ⇣ ⇤ ⇥ ⇦ ⇨ ⇩ ⇪ ⇧ ⇫ ⇬ ⇭ ⇮ ⇯ ⇰ ⇱ ⇲ ⇴ ⇵ ⇶ ⇷ ⇸ ⇹ ⇺ ⇻ ⇼ ⇽ ⇾ ⇿ ⟰ ⟱ ⟴ ⟵ ⟶ ⟷ ⟸ ⟹ ⟽ ⟾ ⟺ ⟻ ⟼ ⟿ ⤀ ⤁ ⤅ ⤂ ⤃ ⤄ ⤆ ⤇ ⤈ ⤉ ⤊ ⤋ ⤌ ⤍ ⤎ ⤏ ⤐ ⤑ ⤒ ⤓ ⤔ ⤕ ⤖ ⤗ ⤘ ⤙ ⤚ ⤛ ⤜ ⤝ ⤞ ⤟ ⤠ ⤡ ⤢ ⤣ ⤤ ⤥ ⤦ ⤧ ⤨ ⤩ ⤪ ⤭ ⤮ ⤯ ⤰ ⤱ ⤲ ⤳ ⤻ ⤸ ⤾ ⤿ ⤺ ⤼ ⤽ ⤴ ⤵ ⤶ ⤷ ⤹ ⥀ ⥁ ⥂ ⥃ ⥄ ⥅ ⥆ ⥇ ⥈ ⥉ ⥒ ⥓ ⥔ ⥕ ⥖ ⥗ ⥘ ⥙ ⥚ ⥛ ⥜ ⥝ ⥞ ⥟ ⥠ ⥡ ⥢ ⥣ ⥤ ⥥ ⥦ ⥧ ⥨ ⥩ ⥪ ⥫ ⥬ ⥭ ⥮ ⥯ ⥰ ⥱ ⥲ ⥳ ⥴ ⥵ ⥶ ⥷ ⥸ ⥹ ⥺ ⥻ ➔ ➘ ➙ ➚ ➛ ➜ ➝ ➞ ➟ ➠ ➡ ➢ ➣ ➤ ➥ ➦ ➧ ➨ ➩ ➪ ➫ ➬ ➭ ➮ ➯ ➱ ➲ ➳ ➴ ➵ ➶ ➷ ➸ ➹ ➺ ➻ ➼ ➽ ➾ ⬀ ⬁ ⬂ ⬃ ⬄ ⬅ ⬆ ⬇ ⬈ ⬉ ⬊ ⬋ ⬌ ⬍ ⏎ ▲ ▼ ◀ ▶ ⬎ ⬏ ⬐ ⬑ ☇ ☈ ⍃ ⍄ ⍇ ⍈ ⍐ ⍗ ⍌ ⍓ ⍍ ⍔ ⍏ ⍖ ⍅ ⍆
+
+*/
+div.output_prompt {
+    color: #000000;
 }
 
 .code_cell div.input_prompt:after,
@@ -344,9 +285,6 @@ div.input_prompt {
     font-style: normal !important;
 }
 
-div.output_prompt {
-    color: #000000;
-}
 
 div.input_area {
     border-radius: 0px;
@@ -405,8 +343,7 @@ table.dataframe thead {
 }
 
 table.dataframe thead tr {
-    background-color: #f8f8f8;
-    color: #BA5400;
+    color: #A05200;
     font-style: normal;
     padding: 5px 10px;
     border-bottom:  1px solid #828282;
@@ -506,11 +443,67 @@ table thead tr th, table.dataframe thead tr th {
 }
 div.cell {
 	padding: 12px 0px 5px 0px;
+	right: 2px;
 	border:  none;
 }
 div.cell.selected {
     border-radius: 0px;
 }
+
+
+div.cell.selected {
+    border: none;
+    background: none !important;
+}
+
+div.cell.selected .inner_cell {
+	border-right: 2px solid #CCC;
+	margin-right: -2px;
+}
+
+
+div.cell.selected div.input:before {
+	display: inline-block;
+	position: absolute;
+    content: "\279E";
+    font-size: 0.875rem;
+    top: 16px;
+    width: 10px;
+    left: 30px;
+    color: #009489;
+    font-style: bold !important;
+}
+
+.edit_mode div.cell.selected div.input:before {
+    color: #D14187;
+}
+
+div.cell.selected:before, div.cell.selected.jupyter-soft-selected:before {
+    position: absolute;
+    display: none;
+    top: -1px;
+    left: -1px;
+    width: 0px;
+    height: calc(100% + 2px);
+    content: '';
+    background: none;
+}
+
+div.out_prompt_overlay:hover {
+	box-shadow: none;
+	background: none;
+}
+
+.edit_mode div.cell.selected {
+    border: none;
+    background: none !important;
+}
+
+.edit_mode div.cell.selected:before{
+	width: 0px;
+	background: none;
+}
+
 
 div.cell.edit_mode {
     border-radius: 0px;
@@ -522,12 +515,14 @@ div.output_html {
     color: #333;
 }
 
+
+
 span.ansiblack {
     color: #828282;
 }
 
 span.ansiblue {
-    color: #00A397;
+    color: #009489;
 }
 
 span.ansigray {
@@ -539,7 +534,7 @@ span.ansigreen {
 }
 
 span.ansipurple {
-    color: #9059D4;
+    color: #793ac7;
 }
 
 span.ansired {
@@ -547,7 +542,7 @@ span.ansired {
 }
 
 span.ansiyellow {
-    color: #B58900;
+    color: #ba9600;
 }
 
 div.output_stderr {
@@ -555,7 +550,7 @@ div.output_stderr {
 }
 
 div.output_stderr pre {
-    /* color: #9059D4; */
+    /* color: #793ac7; */
 }
 
 .cm-s-ipython.CodeMirror {
@@ -589,13 +584,17 @@ div.output_stderr pre {
 }
 
 .cm-s-ipython span.cm-number {
-    color: #D14187;
+    color: #007ad0;
 }
 
-.cm-s-ipython span.cm-property,
+.cm-s-ipython span.cm-property {
+	color: #D14187;
+}
 .cm-s-ipython span.cm-attribute {
     color: #688A0A;
 }
+
+
 
 .cm-s-ipython span.cm-keyword {
     font-weight: normal;
@@ -603,32 +602,32 @@ div.output_stderr pre {
 }
 
 .cm-s-ipython span.cm-string {
-    color: #B58900;
+    color: #ba9600;
 }
 
 .cm-s-ipython span.cm-operator {
-    color: #828282;
+    color: #BA5400;
     font-weight: normal;
 }
 
 .cm-s-ipython span.cm-builtin {
-    color: #0F86D9;
+    color: #793ac7;
 }
 
 .cm-s-ipython span.cm-variable {
-    color: #00A397;
+    color: #009489;
 }
 
 .cm-s-ipython span.cm-variable-2 {
-    color: #0F86D9;
+    color: #007ad0;
 }
 
 .cm-s-ipython span.cm-def {
-    color: #00A397;
+    color: #009489;
 }
 
 .cm-s-ipython span.cm-error {
-    background: #FFBDBD;
+    /*background: #FFBDBD;*/
     color: #D43132;
 }
 
@@ -641,7 +640,7 @@ div.output_stderr pre {
 }
 
 .cm-s-ipython span.cm-link {
-    color: #9059D4;
+    color: #793ac7;
 }
 
 .cm-s-ipython .CodeMirror-matchingbracket {
@@ -649,9 +648,22 @@ div.output_stderr pre {
     color: #828282 !important;
 }
 
-/* Unicode Arrows
-Source: http://www.copypastecharacter.com/
 
-▼ ↪ ↩ ← ↑ → ↓ ↔ ↕ ↖ ↗ ↘ ↙ ↚ ↛ ↜ ↝ ↞ ↟ ↠ ↡ ↢ ↣ ↤ ↦ ↥ ↧ ↨ ↫ ↬ ↭ ↮ ↯ ↰ ↱ ↲ ↴ ↳ ↵ ↶ ↷ ↸ ↹ ↺ ↻ ⟲ ⟳ ↼ ↽ ↾ ↿ ⇀ ⇁ ⇂ ⇃ ⇄ ⇅ ⇆ ⇇ ⇈ ⇉ ⇊ ⇋ ⇌ ⇍ ⇏ ⇎ ⇑ ⇓ ⇐ ⇒ ⇔ ⇕ ⇖ ⇗ ⇘ ⇙ ⇳ ⇚ ⇛ ⇜ ⇝ ⇞ ⇟ ⇠ ⇡ ⇢ ⇣ ⇤ ⇥ ⇦ ⇨ ⇩ ⇪ ⇧ ⇫ ⇬ ⇭ ⇮ ⇯ ⇰ ⇱ ⇲ ⇴ ⇵ ⇶ ⇷ ⇸ ⇹ ⇺ ⇻ ⇼ ⇽ ⇾ ⇿ ⟰ ⟱ ⟴ ⟵ ⟶ ⟷ ⟸ ⟹ ⟽ ⟾ ⟺ ⟻ ⟼ ⟿ ⤀ ⤁ ⤅ ⤂ ⤃ ⤄ ⤆ ⤇ ⤈ ⤉ ⤊ ⤋ ⤌ ⤍ ⤎ ⤏ ⤐ ⤑ ⤒ ⤓ ⤔ ⤕ ⤖ ⤗ ⤘ ⤙ ⤚ ⤛ ⤜ ⤝ ⤞ ⤟ ⤠ ⤡ ⤢ ⤣ ⤤ ⤥ ⤦ ⤧ ⤨ ⤩ ⤪ ⤭ ⤮ ⤯ ⤰ ⤱ ⤲ ⤳ ⤻ ⤸ ⤾ ⤿ ⤺ ⤼ ⤽ ⤴ ⤵ ⤶ ⤷ ⤹ ⥀ ⥁ ⥂ ⥃ ⥄ ⥅ ⥆ ⥇ ⥈ ⥉ ⥒ ⥓ ⥔ ⥕ ⥖ ⥗ ⥘ ⥙ ⥚ ⥛ ⥜ ⥝ ⥞ ⥟ ⥠ ⥡ ⥢ ⥣ ⥤ ⥥ ⥦ ⥧ ⥨ ⥩ ⥪ ⥫ ⥬ ⥭ ⥮ ⥯ ⥰ ⥱ ⥲ ⥳ ⥴ ⥵ ⥶ ⥷ ⥸ ⥹ ⥺ ⥻ ➔ ➘ ➙ ➚ ➛ ➜ ➝ ➞ ➟ ➠ ➡ ➢ ➣ ➤ ➥ ➦ ➧ ➨ ➩ ➪ ➫ ➬ ➭ ➮ ➯ ➱ ➲ ➳ ➴ ➵ ➶ ➷ ➸ ➹ ➺ ➻ ➼ ➽ ➾ ⬀ ⬁ ⬂ ⬃ ⬄ ⬅ ⬆ ⬇ ⬈ ⬉ ⬊ ⬋ ⬌ ⬍ ⏎ ▲ ▼ ◀ ▶ ⬎ ⬏ ⬐ ⬑ ☇ ☈ ⍃ ⍄ ⍇ ⍈ ⍐ ⍗ ⍌ ⍓ ⍍ ⍔ ⍏ ⍖ ⍅ ⍆
+/* ANSI colors */
 
-*/
+.ansi-red-fg {
+	color: #D43132;
+	font-weight: bold;
+}
+
+.ansi-green-fg {
+	color: #688A0A;
+}
+
+.ansi-cyan-fg {
+	color: #009489;
+}
+
+.ansi-blue-fg {
+	color: #007ad0;
+}
