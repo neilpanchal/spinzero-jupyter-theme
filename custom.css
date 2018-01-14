@@ -8,10 +8,20 @@ YELLOW      = #C39900
 ORANGE      = #CF5804
 RED         = #D43132
 MAGENTA     = #C74483
-VIOLET      = #722fc3
+VIOLET      = #975DDE
 BLUE        = #2B88D9
 CYAN        = #00A397
 GREEN       = #688A0A
+
+// New colors. These are a bit darker to allow for a better contrast.
+YELLOW      = #B58900			[181,137,0]
+ORANGE      = #BA5400			[186,84,0]
+RED         = #D43132			[176,47,48]
+MAGENTA     = #D14187			[209,65,135]
+VIOLET      = #9059D4			[144,89,212]
+BLUE        = #0F86D9			[15,134,217]
+CYAN        = #00A397			[0,163,151]
+GREEN       = #688A0A			[104,138,10]
 
 BACKGROUND  = #F8F8F8
 DARK GRAY   = #383838
@@ -201,7 +211,7 @@ div.cell.selected div.input:before {
 }
 
 .edit_mode div.cell.selected div.input:before {
-    color: #C74483;
+    color: #D14187;
 }
 
 div.cell.selected:before, div.cell.selected.jupyter-soft-selected:before {
@@ -315,7 +325,7 @@ div#notebook {
     font-size: 1rem;
 }
 .kernel_idle_icon:before {
-	color: #C74483;
+	color: #D14187;
 }
 
 .kernel_busy_icon:before {
@@ -396,7 +406,7 @@ table.dataframe thead {
 
 table.dataframe thead tr {
     background-color: #f8f8f8;
-    color: #CF5804;
+    color: #BA5400;
     font-style: normal;
     padding: 5px 10px;
     border-bottom:  1px solid #828282;
@@ -473,7 +483,7 @@ table thead, table.dataframe thead {
 table thead th:not(:empty), table.dataframe thead th:not(:empty),
 table thead tr th, table.dataframe thead tr th {
     background-color: #f8f8f8;
-    color: #CF5804;
+    color: #BA5400;
     text-align: left;
     font-style: normal;
     padding: 5px 10px;
@@ -504,7 +514,7 @@ div.cell.selected {
 
 div.cell.edit_mode {
     border-radius: 0px;
-    border: thin solid #CF5804;
+    border: thin solid #BA5400;
 }
 
 div.text_cell_render,
@@ -529,7 +539,7 @@ span.ansigreen {
 }
 
 span.ansipurple {
-    color: #722fc3;
+    color: #9059D4;
 }
 
 span.ansired {
@@ -537,7 +547,7 @@ span.ansired {
 }
 
 span.ansiyellow {
-    color: #C39900;
+    color: #B58900;
 }
 
 div.output_stderr {
@@ -545,7 +555,7 @@ div.output_stderr {
 }
 
 div.output_stderr pre {
-    /* color: #722fc3; */
+    /* color: #9059D4; */
 }
 
 .cm-s-ipython.CodeMirror {
@@ -575,11 +585,11 @@ div.output_stderr pre {
 }
 
 .cm-s-ipython span.cm-atom {
-    color: #C74483;
+    color: #D14187;
 }
 
 .cm-s-ipython span.cm-number {
-    color: #C74483;
+    color: #D14187;
 }
 
 .cm-s-ipython span.cm-property,
@@ -593,7 +603,7 @@ div.output_stderr pre {
 }
 
 .cm-s-ipython span.cm-string {
-    color: #C39900;
+    color: #B58900;
 }
 
 .cm-s-ipython span.cm-operator {
@@ -602,7 +612,7 @@ div.output_stderr pre {
 }
 
 .cm-s-ipython span.cm-builtin {
-    color: #2B88D9;
+    color: #0F86D9;
 }
 
 .cm-s-ipython span.cm-variable {
@@ -610,7 +620,7 @@ div.output_stderr pre {
 }
 
 .cm-s-ipython span.cm-variable-2 {
-    color: #2B88D9;
+    color: #0F86D9;
 }
 
 .cm-s-ipython span.cm-def {
@@ -631,7 +641,7 @@ div.output_stderr pre {
 }
 
 .cm-s-ipython span.cm-link {
-    color: #722fc3;
+    color: #9059D4;
 }
 
 .cm-s-ipython .CodeMirror-matchingbracket {
