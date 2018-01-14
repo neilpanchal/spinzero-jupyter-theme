@@ -9,16 +9,15 @@ Copy the contents of this repository to the `.jupyter/custom"` folder such that 
 ```CSS
 /*
 
-PALETTE
-
-YELLOW      = #C39900
-ORANGE      = #CF5804
-RED         = #D43132
-MAGENTA     = #C74483
-VIOLET      = #975DDE
-BLUE        = #2B88D9
-CYAN        = #00A397
-GREEN       = #688A0A
+YELLOW      = #ba9600			[181,137,0]
+ORANGE      = #BA5400			[186,84,0]
+RED         = #D43132			[176,47,48]
+MAGENTA     = #D14187			[209,65,135]
+VIOLET      = #793ac7			[144,89,212]
+BLUE        = #007ad0			[15,134,217]
+CYAN        = #009489			[0,163,151]
+GREEN       = #688A0A			[104,138,10]
+BROWN 		= #A05200			[156,98,48]
 
 BACKGROUND  = #F8F8F8
 DARK GRAY   = #383838
@@ -28,7 +27,5 @@ LIGHT GRAY  = #828282
 ```
 
 ### Screenshot
-
-*Note*: There are a bunch of things I need to fix and the entire theme needs an overhaul. Screenshot below is outdated. Please install the theme and see it for yourself. I'll update the screenshot once the overhaul is finished.
 
 ![Notebook Design Screenshot](https://github.com/neilpanchal/spinzero-jupyter-theme/raw/master/screenshot.png "Notebook Design")
