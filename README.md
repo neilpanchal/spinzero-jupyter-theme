@@ -28,4 +28,4 @@ LIGHT GRAY  = #828282
 
 ### Screenshot
 
-![Notebook Design Screenshot](https://github.com/neilpanchal/spinzero-jupyter-theme/raw/master/screenshot.png "Notebook Design")
+![Notebook Design Screenshot](https://github.com/neilpanchal/spinzero-jupyter-theme/raw/master/screenshot_v2.png "Notebook Design")
