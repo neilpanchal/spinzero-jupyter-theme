@@ -1,5 +1,5 @@
 ### Spinzero - Jupyter Notebook Theme
-Personal theme that I use for Jupyter notebooks
+Personal theme that I use for Jupyter notebooks. It uses a chromatic palette similar to the popular solarized theme with excellent contrast against white background. Classic latex font - "Computer Modern" is used for body text to give it a professional/academic look. No official jupyter logo. Includes dataframe table formatting, matplotlib style, and a number of aesthetic updates to ensure clean, sophisticated and purposeful presentation. If you find errors or ways to improve, please submit and issue or a pull-request.
 
 ### Installation instructions
 Create a new directory `".jupyter/custom"` in your home folder if it doesn't exist.
