@@ -127,8 +127,7 @@ body {
     font-weight: normal;
     font-family: "sf-mono", "Helvetica Neue", Helvetica, Arial, sans-serif;
     overflow: inherit;
-    right: auto;
-    left: 40px;
+    vertical-align: middle;
 }
 
 body .notebook-app {
