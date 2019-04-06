@@ -19,7 +19,7 @@ print(get_python_lib())
 ```
 Try placing the custom.css such that it is located at:
 `/Users/Username/miniconda3/lib/python3.7/site-packages/notebook/static/custom/custom.css`
-
+For more information, see this Github issue: ![Link](https://github.com/jupyter/jupyter/issues/295)
 
 ### Color Palette
 ```
