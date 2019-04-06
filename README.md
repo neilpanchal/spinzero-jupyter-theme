@@ -3,7 +3,7 @@ Personal theme that I use for Jupyter notebooks. It uses a chromatic palette sim
 
 ### Installation instructions
 Create a new directory `".jupyter/custom"`[1] in your home folder if it doesn't exist.
-Copy the contents of this repository to the `.jupyter/custom"` folder such that `custom.css` file is located at `.jupyter/custom/custom.css`. If this method doesn't work, see [2]
+Copy the contents of this repository to the `.jupyter/custom"` folder such that `custom.css` file is located at `.jupyter/custom/custom.css`. If this method doesn't work, see [2].
 
 [1] Custom directory can be found by launching Jupyter notebook and using the following commands:
 ```
@@ -19,6 +19,7 @@ print(get_python_lib())
 ```
 Try placing the custom.css such that it is located at:
 `/Users/Username/miniconda3/lib/python3.7/site-packages/notebook/static/custom/custom.css`
+
 For more information, see this Github issue: ![Link](https://github.com/jupyter/jupyter/issues/295)
 
 ### Color Palette
